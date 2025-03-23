@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 from typing import List
 import asyncio
-import logfire
 import pathlib
 
 from pydantic_ai import Agent
@@ -10,10 +9,6 @@ from pydantic_ai.messages import ModelMessage, ModelRequest, ModelResponse, Text
 
 # Load environment variables
 load_dotenv()
-
-# Configure logfire to suppress warnings
-logfire.configure(send_to_logfire='never')
-
 
 class CLI:
     def __init__(self):
